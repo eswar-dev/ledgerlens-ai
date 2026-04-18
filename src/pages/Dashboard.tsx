@@ -3,7 +3,7 @@ import {
   Area, AreaChart, CartesianGrid, Cell, Line, Pie, PieChart,
   ResponsiveContainer, Tooltip, XAxis, YAxis, ComposedChart, Bar,
 } from "recharts";
-import { Home, Car, Shield, Wifi, Search, ArrowUpRight, ArrowDownRight, Download, Plus, MoreHorizontal } from "lucide-react";
+import { Home, Car, Shield, Wifi, Search, ArrowUpRight, ArrowDownRight, Download, Plus, MoreHorizontal, Sparkles, TrendingUp, AlertTriangle, Target } from "lucide-react";
 
 const cashflow = [
   { m: "Jan", income: 220, expenses: 160 },
