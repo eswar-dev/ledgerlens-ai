@@ -32,7 +32,7 @@ function Logo() {
 
 export function AppSidebar() {
   return (
-    <aside className="hidden md:flex w-[248px] shrink-0 flex-col bg-sidebar text-sidebar-foreground">
+    <aside className="hidden md:flex w-[252px] shrink-0 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
       {/* Brand */}
       <div className="px-5 pt-7 pb-10">
         <Logo />
