@@ -9,18 +9,16 @@ const navItems = [
 
 function Logo() {
   return (
-    <div className="flex items-center gap-3">
-      <div className="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-sidebar-primary to-[hsl(152_70%_38%)] text-sidebar-primary-foreground shadow-[0_8px_24px_-8px_hsl(152_60%_50%/0.5)]">
-        <svg viewBox="0 0 32 32" className="h-[22px] w-[22px]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 6v18a2 2 0 0 0 2 2h18" />
-          <path d="M11 21l4-6 4 3 6-9" />
-          <circle cx="25" cy="9" r="2" fill="currentColor" stroke="none" />
+    <div className="flex items-center gap-2.5">
+      <div className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-sidebar-primary to-[hsl(221_83%_45%)] text-sidebar-primary-foreground shadow-[0_6px_18px_-6px_hsl(217_91%_60%/0.55)]">
+        <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 4v14a2 2 0 0 0 2 2h14" />
+          <path d="M8 15l3-4 3 2 4-6" />
         </svg>
-        <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-[hsl(152_85%_60%)] ring-2 ring-sidebar-background" />
       </div>
       <div className="leading-tight">
-        <div className="font-display text-[22px] text-sidebar-accent-foreground tracking-tight">
-          LedgerLens<span className="text-sidebar-primary">.</span>
+        <div className="text-[16px] font-bold tracking-tight text-sidebar-accent-foreground">
+          LedgerLens
         </div>
         <div className="text-[9.5px] font-semibold uppercase tracking-[0.22em] text-sidebar-foreground/55">
           Financial Intelligence
