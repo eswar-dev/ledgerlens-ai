@@ -3,7 +3,7 @@ import {
   Area, AreaChart, CartesianGrid, Cell, Line, Pie, PieChart,
   ResponsiveContainer, Tooltip, XAxis, YAxis, ComposedChart, Bar,
 } from "recharts";
-import { Home, Car, Shield, Wifi, Search, ArrowUpRight, ArrowDownRight, Download, Plus, MoreHorizontal } from "lucide-react";
+import { Home, Car, Shield, Wifi, Search, ArrowUpRight, ArrowDownRight, Download, Plus, MoreHorizontal, Sparkles, TrendingUp, AlertTriangle, Target } from "lucide-react";
 
 const cashflow = [
   { m: "Jan", income: 220, expenses: 160 },
@@ -75,7 +75,43 @@ export default function Dashboard() {
       />
 
       <div className="px-10 py-10 space-y-8">
-        {/* KPIs */}
+        {/* Insights & Recommendations */}
+        <section className="rounded-2xl border border-border bg-card overflow-hidden">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-border/70">
+            <div className="flex items-center gap-2">
+              <span className="grid h-7 w-7 place-items-center rounded-lg bg-primary text-primary-foreground">
+                <Sparkles className="h-3.5 w-3.5" />
+              </span>
+              <div>
+                <h3 className="font-display text-[20px] text-foreground leading-tight">Insights & Recommendations</h3>
+                <p className="text-[11.5px] text-muted-foreground">AI-generated from your June activity · 4 new</p>
+              </div>
+            </div>
+            <button className="text-[11.5px] font-semibold text-muted-foreground hover:text-foreground">View all →</button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-border/60">
+            {[
+              { icon: TrendingUp, tag: "Trend", tagClass: "bg-accent-soft text-accent", title: "Dining spend up 34%", body: "₹18,420 across 22 visits — mostly weekends. Consider a monthly cap of ₹14,000.", cta: "Set budget" },
+              { icon: AlertTriangle, tag: "Anomaly", tagClass: "bg-destructive/10 text-destructive", title: "Duplicate Netflix charge", body: "Two ₹649 debits on Jun 11 from the same merchant. Likely a billing retry.", cta: "Review" },
+              { icon: Target, tag: "Goal", tagClass: "bg-muted text-foreground", title: "Savings rate 26.2%", body: "You're 3.8 pts shy of your 30% target. Trim ₹7,400 from discretionary to close the gap.", cta: "See plan" },
+              { icon: Sparkles, tag: "Tax", tagClass: "bg-accent-soft text-accent", title: "₹42,300 deductible", body: "Identified 14 transactions eligible under 80C and home-office rules for FY24.", cta: "Export" },
+            ].map((c) => (
+              <div key={c.title} className="p-5 hover:bg-muted/30 transition-colors">
+                <div className="flex items-center justify-between">
+                  <span className="grid h-8 w-8 place-items-center rounded-lg bg-muted">
+                    <c.icon className="h-3.5 w-3.5 text-foreground" strokeWidth={2} />
+                  </span>
+                  <span className={"rounded-full px-2 py-0.5 text-[9.5px] font-bold uppercase tracking-wider " + c.tagClass}>{c.tag}</span>
+                </div>
+                <h4 className="mt-3.5 font-display text-[18px] leading-tight text-foreground">{c.title}</h4>
+                <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">{c.body}</p>
+                <button className="mt-3 text-[11.5px] font-semibold text-foreground hover:text-accent">{c.cta} →</button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
         <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
           <Kpi label="Total Income" value="₹2,67,000" delta="8.2%" />
           <Kpi label="Total Expenses" value="₹1,97,000" delta="3.1%" positive={false} />
