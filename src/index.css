@@ -8,9 +8,9 @@
 
 @layer base {
   :root {
-    /* Warm off-white canvas */
-    --background: 40 22% 96%;
-    --foreground: 160 15% 8%;
+    /* Light sky-blue canvas */
+    --background: 205 70% 96%;
+    --foreground: 215 35% 14%;
 
     --card: 0 0% 100%;
     --card-foreground: 160 15% 8%;
@@ -50,19 +50,19 @@
 
     --radius: 0.875rem;
 
-    /* Sidebar — deep forest, premium */
-    --sidebar-background: 165 30% 9%;
-    --sidebar-foreground: 150 12% 72%;
-    --sidebar-primary: 152 60% 50%;
-    --sidebar-primary-foreground: 165 35% 8%;
-    --sidebar-accent: 165 25% 14%;
-    --sidebar-accent-foreground: 40 25% 96%;
-    --sidebar-border: 165 22% 16%;
-    --sidebar-ring: 152 60% 50%;
+    /* Sidebar — soft sky blue */
+    --sidebar-background: 205 80% 92%;
+    --sidebar-foreground: 215 30% 28%;
+    --sidebar-primary: 210 90% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 205 75% 86%;
+    --sidebar-accent-foreground: 215 40% 16%;
+    --sidebar-border: 205 50% 82%;
+    --sidebar-ring: 210 90% 48%;
 
     /* Effects */
     --gradient-health: linear-gradient(160deg, hsl(160 35% 12%) 0%, hsl(160 30% 18%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(40 22% 97%) 0%, hsl(40 22% 94%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(205 75% 97%) 0%, hsl(205 70% 94%) 100%);
     --shadow-card: 0 1px 0 hsl(160 15% 8% / 0.04), 0 1px 2px hsl(160 15% 8% / 0.04);
     --shadow-soft: 0 1px 0 hsl(160 15% 8% / 0.03);
     --shadow-elevated: 0 1px 0 hsl(160 15% 8% / 0.04), 0 12px 32px -16px hsl(160 15% 8% / 0.12);
