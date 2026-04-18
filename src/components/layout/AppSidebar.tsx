@@ -10,11 +10,12 @@ const navItems = [
 
 function Logo() {
   return (
-    <div className="flex items-center justify-center rounded-xl bg-white/95 px-3 py-2.5 shadow-sm">
+    <div className="flex items-center">
       <img
         src={logoImg}
         alt="LedgerLens AI — Financial Intelligence"
-        className="h-10 w-auto object-contain"
+        className="h-9 w-auto object-contain opacity-95"
+        style={{ filter: "brightness(0) invert(1)" }}
       />
     </div>
   );
@@ -24,7 +25,7 @@ export function AppSidebar() {
   return (
     <aside className="hidden md:flex w-[256px] shrink-0 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
       {/* Brand */}
-      <div className="px-5 pt-7 pb-8">
+      <div className="px-5 pt-6 pb-5 border-b border-white/[0.08]">
         <Logo />
       </div>
 
