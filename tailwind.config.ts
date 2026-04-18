@@ -12,7 +12,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['"DM Sans"', '"Segoe UI"', 'system-ui', 'sans-serif'],
         display: ['Instrument Serif', 'ui-serif', 'Georgia', 'serif'],
       },
       colors: {
