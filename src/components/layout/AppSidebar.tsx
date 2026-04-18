@@ -10,12 +10,11 @@ const navItems = [
 
 function Logo() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-center rounded-xl bg-white/95 px-3 py-2 shadow-sm ring-1 ring-white/10">
       <img
         src={logoImg}
-        alt="LedgerLens AI — Financial Intelligence"
-        className="h-9 w-auto object-contain opacity-95"
-        style={{ filter: "brightness(0) invert(1)" }}
+        alt="LedgerLens AI — AI-Powered Financial Intelligence"
+        className="h-10 w-auto object-contain"
       />
     </div>
   );
