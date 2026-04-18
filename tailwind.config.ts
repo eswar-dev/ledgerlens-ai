@@ -13,6 +13,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Instrument Serif', 'ui-serif', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -80,9 +81,11 @@ export default {
       boxShadow: {
         card: "var(--shadow-card)",
         soft: "var(--shadow-soft)",
+        elevated: "var(--shadow-elevated)",
       },
       backgroundImage: {
         "gradient-health": "var(--gradient-health)",
+        "gradient-hero": "var(--gradient-hero)",
       },
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },

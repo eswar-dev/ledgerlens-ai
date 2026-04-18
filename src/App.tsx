@@ -19,8 +19,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/upload" element={<Upload />} />
+            <Route path="/" element={<Upload />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/chatbot" element={<ChatBot />} />
           </Route>
           <Route path="*" element={<NotFound />} />
