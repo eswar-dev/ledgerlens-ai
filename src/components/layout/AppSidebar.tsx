@@ -1,5 +1,6 @@
 import { LayoutGrid, UploadCloud, Bot, LifeBuoy, Settings, LogOut, ChevronsUpDown } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import logoImg from "@/assets/ledgerlens-logo.png";
 
 const navItems = [
   { to: "/", label: "Upload", icon: UploadCloud, end: true, hint: "Ingest" },
@@ -9,21 +10,12 @@ const navItems = [
 
 function Logo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <div className="relative grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-sidebar-primary to-[hsl(221_83%_45%)] text-sidebar-primary-foreground shadow-[0_6px_18px_-6px_hsl(217_91%_60%/0.55)]">
-        <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M4 4v14a2 2 0 0 0 2 2h14" />
-          <path d="M8 15l3-4 3 2 4-6" />
-        </svg>
-      </div>
-      <div className="leading-tight">
-        <div className="text-[16px] font-bold tracking-tight text-sidebar-accent-foreground">
-          LedgerLens
-        </div>
-        <div className="text-[9.5px] font-semibold uppercase tracking-[0.22em] text-sidebar-foreground/55">
-          Financial Intelligence
-        </div>
-      </div>
+    <div className="flex items-center justify-center rounded-xl bg-white/95 px-3 py-2.5 shadow-sm">
+      <img
+        src={logoImg}
+        alt="LedgerLens AI — Financial Intelligence"
+        className="h-10 w-auto object-contain"
+      />
     </div>
   );
 }
