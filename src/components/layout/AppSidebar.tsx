@@ -9,21 +9,20 @@ const navItems = [
 
 function Logo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <div className="relative grid h-9 w-9 place-items-center rounded-[10px] bg-sidebar-primary text-sidebar-primary-foreground shadow-soft">
-        {/* Custom mark: stacked ledger lines + lens dot */}
-        <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-          <path d="M4 7h10" />
-          <path d="M4 12h7" />
-          <path d="M4 17h12" />
-          <circle cx="18" cy="9.5" r="2.4" fill="currentColor" stroke="none" />
+    <div className="flex items-center gap-3">
+      <div className="relative grid h-10 w-10 place-items-center rounded-xl bg-sidebar-primary text-sidebar-primary-foreground shadow-soft">
+        <svg viewBox="0 0 28 28" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 22V6" />
+          <path d="M5 22h16" />
+          <path d="M9 18l4-5 3 3 5-7" />
+          <circle cx="21" cy="9" r="1.6" fill="currentColor" stroke="none" />
         </svg>
       </div>
       <div className="leading-tight">
-        <div className="font-display text-[20px] text-sidebar-accent-foreground">
-          LedgerLens<span className="text-sidebar-primary">.</span>
+        <div className="font-display text-[22px] text-sidebar-primary">
+          LedgerLens<span className="text-accent">.</span>
         </div>
-        <div className="text-[9px] font-medium uppercase tracking-[0.18em] text-sidebar-foreground/60">
+        <div className="text-[9.5px] font-semibold uppercase tracking-[0.2em] text-sidebar-foreground/55">
           Financial Intelligence
         </div>
       </div>
