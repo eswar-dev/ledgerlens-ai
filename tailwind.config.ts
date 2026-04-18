@@ -13,7 +13,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"DM Sans"', '"Segoe UI"', 'system-ui', 'sans-serif'],
-        display: ['Instrument Serif', 'ui-serif', 'Georgia', 'serif'],
+        display: ['"DM Sans"', '"Segoe UI"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
