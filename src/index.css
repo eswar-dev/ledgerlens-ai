@@ -50,15 +50,15 @@
 
     --radius: 0.875rem;
 
-    /* Sidebar — warm editorial cream */
-    --sidebar-background: 38 28% 94%;
-    --sidebar-foreground: 160 18% 28%;
-    --sidebar-primary: 160 38% 14%;
-    --sidebar-primary-foreground: 40 30% 97%;
-    --sidebar-accent: 38 30% 88%;
-    --sidebar-accent-foreground: 160 38% 14%;
-    --sidebar-border: 38 18% 84%;
-    --sidebar-ring: 160 38% 14%;
+    /* Sidebar — deep forest, premium */
+    --sidebar-background: 165 30% 9%;
+    --sidebar-foreground: 150 12% 72%;
+    --sidebar-primary: 152 60% 50%;
+    --sidebar-primary-foreground: 165 35% 8%;
+    --sidebar-accent: 165 25% 14%;
+    --sidebar-accent-foreground: 40 25% 96%;
+    --sidebar-border: 165 22% 16%;
+    --sidebar-ring: 152 60% 50%;
 
     /* Effects */
     --gradient-health: linear-gradient(160deg, hsl(160 35% 12%) 0%, hsl(160 30% 18%) 100%);
