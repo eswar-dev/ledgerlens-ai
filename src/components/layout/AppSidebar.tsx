@@ -1,6 +1,5 @@
-import { LayoutGrid, UploadCloud, Bot, LifeBuoy, Settings, LogOut, ChevronsUpDown } from "lucide-react";
+import { LayoutGrid, UploadCloud, Bot, LifeBuoy, Settings, LogOut, ChevronsUpDown, Sparkles } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import logoImg from "@/assets/ledgerlens-logo.png";
 
 const navItems = [
   { to: "/", label: "Upload", icon: UploadCloud, end: true, hint: "Ingest" },
@@ -10,12 +9,29 @@ const navItems = [
 
 function Logo() {
   return (
-    <div className="flex items-center justify-center rounded-xl bg-white/95 px-3 py-2 shadow-sm ring-1 ring-white/10">
-      <img
-        src={logoImg}
-        alt="LedgerLens AI — AI-Powered Financial Intelligence"
-        className="h-10 w-auto object-contain"
-      />
+    <div className="flex items-center gap-2.5">
+      <div className="relative grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-sidebar-primary to-[hsl(225_85%_55%)] shadow-lg shadow-sidebar-primary/30">
+        <svg viewBox="0 0 24 24" className="h-5 w-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="10" cy="10" r="6" />
+          <path d="m20 20-3.5-3.5" />
+          <path d="M8 12V9" />
+          <path d="M10.5 12V7.5" />
+          <path d="M13 12v-2" />
+        </svg>
+      </div>
+      <div className="flex min-w-0 flex-col leading-none">
+        <div className="flex items-center gap-1.5">
+          <span className="text-[15px] font-bold tracking-tight text-sidebar-accent-foreground">
+            Ledger<span className="text-sidebar-primary">Lens</span>
+          </span>
+          <span className="inline-flex items-center gap-0.5 rounded-md bg-sidebar-primary/15 px-1.5 py-0.5 text-[9px] font-bold tracking-wide text-sidebar-primary">
+            AI <Sparkles className="h-2.5 w-2.5" />
+          </span>
+        </div>
+        <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.18em] text-sidebar-foreground/45">
+          Financial Intelligence
+        </span>
+      </div>
     </div>
   );
 }
