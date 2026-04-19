@@ -134,7 +134,7 @@ export default function ChatBot() {
             <button className="grid h-9 w-9 place-items-center rounded-xl text-muted-foreground hover:bg-muted">
               <Mic className="h-4 w-4" />
             </button>
-            <button className="inline-flex items-center gap-1.5 rounded-xl bg-foreground px-3.5 py-2 text-[12.5px] font-semibold text-background hover:opacity-90">
+            <button className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] px-3.5 py-2 text-[12.5px] font-semibold text-primary-foreground shadow-[0_1px_2px_hsl(221_83%_30%/0.25),inset_0_1px_0_hsl(0_0%_100%/0.15)] hover:shadow-[0_4px_14px_-2px_hsl(221_83%_53%/0.45)] hover:-translate-y-px transition-all">
               Send <Send className="h-3.5 w-3.5" />
             </button>
           </div>
@@ -150,7 +150,7 @@ export default function ChatBot() {
 function BotRow({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-start gap-3 animate-fade-in">
-      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-foreground text-background">
+      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br from-primary to-[hsl(224_76%_42%)] text-primary-foreground shadow-sm">
         <Bot className="h-4 w-4" strokeWidth={1.75} />
       </div>
       <div className="flex-1 min-w-0">{children}</div>
