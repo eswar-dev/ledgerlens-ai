@@ -298,7 +298,7 @@ export default function Dashboard() {
                   className="rounded-lg border border-border bg-background pl-9 pr-3 py-2 text-[12.5px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground/40 w-56"
                 />
               </div>
-              <button className="inline-flex items-center gap-1.5 rounded-lg bg-foreground px-3 py-2 text-[12px] font-semibold text-background hover:opacity-90">
+              <button className="inline-flex items-center gap-1.5 rounded-lg bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] px-3 py-2 text-[12px] font-semibold text-primary-foreground shadow-[0_1px_2px_hsl(221_83%_30%/0.25),inset_0_1px_0_hsl(0_0%_100%/0.15)] hover:shadow-[0_4px_14px_-2px_hsl(221_83%_53%/0.45)] hover:-translate-y-px transition-all">
                 <Plus className="h-3.5 w-3.5" /> Add
               </button>
             </div>

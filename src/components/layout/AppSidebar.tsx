@@ -10,7 +10,7 @@ const navItems = [
 
 export function AppSidebar() {
   return (
-    <aside className="hidden md:flex w-[260px] shrink-0 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
+    <aside className="hidden md:flex fixed left-0 top-0 h-screen w-[260px] z-20 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
       {/* Brand */}
       <div className="px-5 pt-5 pb-4">
         <div className="flex items-center">

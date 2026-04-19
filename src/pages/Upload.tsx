@@ -28,7 +28,7 @@ export default function Upload() {
         title="Bring your statements into focus."
         subtitle="Drop bank, card and brokerage statements. Our financial engine extracts, normalises and contextualises every line in seconds."
         actions={
-          <button className="inline-flex items-center gap-2 rounded-lg bg-foreground px-4 py-2.5 text-[13px] font-semibold text-background hover:opacity-90 transition-opacity">
+          <button className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] px-4 py-2.5 text-[13px] font-semibold text-primary-foreground shadow-[0_1px_2px_hsl(221_83%_30%/0.25),inset_0_1px_0_hsl(0_0%_100%/0.15)] hover:shadow-[0_4px_14px_-2px_hsl(221_83%_53%/0.45)] hover:-translate-y-px transition-all">
             Begin Processing <ArrowRight className="h-3.5 w-3.5" />
           </button>
         }
@@ -49,7 +49,7 @@ export default function Upload() {
                 Supports PDF, CSV, XLSX and high-resolution scans · up to 2 GB total
               </p>
               <div className="mt-6 flex items-center justify-center gap-3">
-                <button className="rounded-lg bg-foreground px-5 py-2.5 text-[13px] font-semibold text-background hover:opacity-90">
+                <button className="rounded-lg bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] px-5 py-2.5 text-[13px] font-semibold text-primary-foreground shadow-[0_1px_2px_hsl(221_83%_30%/0.25),inset_0_1px_0_hsl(0_0%_100%/0.15)] hover:shadow-[0_4px_14px_-2px_hsl(221_83%_53%/0.45)] hover:-translate-y-px transition-all">
                   Browse files
                 </button>
                 <button className="rounded-lg border border-border bg-card px-5 py-2.5 text-[13px] font-semibold text-foreground hover:bg-muted">
@@ -112,7 +112,7 @@ export default function Upload() {
                   <span
                     className={
                       "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md border transition-colors " +
-                      (opt.checked ? "bg-foreground border-foreground text-background" : "border-border bg-background")
+                      (opt.checked ? "bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] border-primary text-primary-foreground" : "border-border bg-background")
                     }
                   >
                     {opt.checked && <Check className="h-3 w-3" strokeWidth={3} />}
@@ -155,13 +155,13 @@ export default function Upload() {
             </div>
             <div className="px-5 pt-4 pb-5">
               <div className="h-1 w-full rounded-full bg-muted overflow-hidden">
-                <div className="h-full w-1/3 rounded-full bg-foreground" />
+                <div className="h-full w-1/3 rounded-full bg-gradient-to-r from-primary to-[hsl(217_91%_60%)]" />
               </div>
               <div className="mt-3 flex items-center gap-2">
                 <button className="flex-1 rounded-lg border border-border bg-card px-4 py-2.5 text-[12.5px] font-semibold text-foreground hover:bg-muted">
                   Clear all
                 </button>
-                <button className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-foreground px-4 py-2.5 text-[12.5px] font-semibold text-background hover:opacity-90">
+                <button className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] px-4 py-2.5 text-[12.5px] font-semibold text-primary-foreground shadow-[0_1px_2px_hsl(221_83%_30%/0.25),inset_0_1px_0_hsl(0_0%_100%/0.15)] hover:shadow-[0_4px_14px_-2px_hsl(221_83%_53%/0.45)] hover:-translate-y-px transition-all">
                   Process <ArrowRight className="h-3.5 w-3.5" />
                 </button>
               </div>
@@ -172,7 +172,7 @@ export default function Upload() {
           <section className="rounded-2xl border border-border bg-card p-5">
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-foreground/5 text-foreground">
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-accent-soft text-primary">
                   <RefreshCw className="h-4 w-4 animate-spin-slow" strokeWidth={1.75} />
                 </div>
                 <div>
@@ -191,7 +191,7 @@ export default function Upload() {
                 <span className="font-display text-[28px] text-foreground leading-none">42<span className="text-muted-foreground text-[16px]">%</span></span>
               </div>
               <div className="mt-2 h-1.5 w-full rounded-full bg-muted overflow-hidden">
-                <div className="h-full w-[42%] rounded-full bg-foreground" />
+                <div className="h-full w-[42%] rounded-full bg-gradient-to-r from-primary to-[hsl(217_91%_60%)]" />
               </div>
             </div>
 
