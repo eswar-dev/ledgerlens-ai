@@ -164,7 +164,7 @@ function UserRow({ children }: { children: React.ReactNode }) {
       <div className="max-w-xl rounded-2xl rounded-tr-md bg-gradient-to-b from-primary to-[hsl(224_76%_46%)] px-5 py-3.5 text-[14px] text-primary-foreground leading-relaxed shadow-[0_1px_2px_hsl(221_83%_30%/0.2)]">
         {children}
       </div>
-      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-accent-soft text-primary text-[11px] font-bold">
+      <div className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-foreground text-background text-[11px] font-bold">
         JV
       </div>
     </div>
