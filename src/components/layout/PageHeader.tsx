@@ -1,4 +1,4 @@
-import { Bell, Search, Command } from "lucide-react";
+import { Bell, ChevronDown, Sparkles } from "lucide-react";
 
 interface PageHeaderProps {
   title: string;
@@ -12,24 +12,39 @@ const tabs = ["Day", "Week", "Month", "Quarter"];
 
 export function PageHeader({ title, subtitle, eyebrow, showTimeframe = false, actions }: PageHeaderProps) {
   return (
-    <header className="border-b border-border bg-card/80 backdrop-blur-xl sticky top-0 z-10">
+    <header className="border-b border-border bg-card/85 backdrop-blur-xl sticky top-0 z-10">
       {/* Top utility bar */}
-      <div className="flex items-center justify-between px-10 py-3 border-b border-border/60">
-        <div className="flex items-center gap-2 text-[12px] text-muted-foreground">
-          <span className="font-medium text-foreground">Workspace</span>
-          <span className="opacity-40">/</span>
-          <span>{eyebrow ?? title}</span>
-        </div>
+      <div className="flex items-center justify-between px-10 py-2.5 border-b border-border/60">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[12px] text-muted-foreground">
+          <span className="font-semibold text-foreground/90">Workspace</span>
+          <span className="text-muted-foreground/40">›</span>
+          <span className="text-muted-foreground">{eyebrow ?? title}</span>
+        </nav>
         <div className="flex items-center gap-2">
-          <div className="hidden md:flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-1.5 text-[12.5px] text-muted-foreground w-72 hover:border-primary/40 transition-colors cursor-pointer">
-            <Search className="h-3.5 w-3.5" />
-            <span className="flex-1">Search transactions, files, insights…</span>
-            <kbd className="flex items-center gap-0.5 rounded border border-border bg-muted px-1.5 py-0.5 text-[10px] font-medium">
-              <Command className="h-2.5 w-2.5" />K
-            </kbd>
-          </div>
-          <button className="grid h-8 w-8 place-items-center rounded-lg border border-border bg-background text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors">
-            <Bell className="h-3.5 w-3.5" />
+          <button
+            type="button"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
+          >
+            <Sparkles className="h-3.5 w-3.5" strokeWidth={1.75} />
+            What's new
+          </button>
+          <span className="hidden sm:block h-4 w-px bg-border" />
+          <button
+            type="button"
+            aria-label="Notifications"
+            className="relative grid h-8 w-8 place-items-center rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
+          >
+            <Bell className="h-4 w-4" strokeWidth={1.75} />
+            <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-primary ring-2 ring-card" />
+          </button>
+          <button
+            type="button"
+            className="flex items-center gap-2 rounded-md px-1.5 py-1 hover:bg-muted/60 transition-colors"
+          >
+            <span className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-primary to-[hsl(224_76%_42%)] text-primary-foreground text-[10.5px] font-bold shadow-sm">
+              JV
+            </span>
+            <ChevronDown className="h-3 w-3 text-muted-foreground" strokeWidth={2} />
           </button>
         </div>
       </div>
@@ -38,7 +53,8 @@ export function PageHeader({ title, subtitle, eyebrow, showTimeframe = false, ac
       <div className="flex flex-wrap items-end justify-between gap-4 px-10 py-7">
         <div className="max-w-2xl">
           {eyebrow && (
-            <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
+            <div className="mb-2 inline-flex items-center gap-1.5 text-[10.5px] font-semibold uppercase tracking-[0.2em] text-primary">
+              <span className="h-1 w-1 rounded-full bg-primary" />
               {eyebrow}
             </div>
           )}
@@ -51,7 +67,7 @@ export function PageHeader({ title, subtitle, eyebrow, showTimeframe = false, ac
         </div>
         <div className="flex items-center gap-3">
           {showTimeframe && (
-            <div className="flex items-center rounded-lg border border-border bg-background p-0.5">
+            <div className="flex items-center rounded-lg border border-border bg-background p-0.5 shadow-[0_1px_2px_hsl(222_33%_13%/0.04)]">
               {tabs.map((t, i) => (
                 <button
                   key={t}
