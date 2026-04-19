@@ -1,4 +1,4 @@
-import { Bell, ChevronDown, Sparkles } from "lucide-react";
+import { Bell } from "lucide-react";
 
 interface PageHeaderProps {
   title: string;
@@ -20,15 +20,7 @@ export function PageHeader({ title, subtitle, eyebrow, showTimeframe = false, ac
           <span className="text-muted-foreground/40">›</span>
           <span className="text-muted-foreground">{eyebrow ?? title}</span>
         </nav>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
-          >
-            <Sparkles className="h-3.5 w-3.5" strokeWidth={1.75} />
-            What's new
-          </button>
-          <span className="hidden sm:block h-4 w-px bg-border" />
+        <div className="flex items-center gap-1">
           <button
             type="button"
             aria-label="Notifications"
@@ -36,15 +28,6 @@ export function PageHeader({ title, subtitle, eyebrow, showTimeframe = false, ac
           >
             <Bell className="h-4 w-4" strokeWidth={1.75} />
             <span className="absolute right-1.5 top-1.5 h-1.5 w-1.5 rounded-full bg-primary ring-2 ring-card" />
-          </button>
-          <button
-            type="button"
-            className="flex items-center gap-2 rounded-md px-1.5 py-1 hover:bg-muted/60 transition-colors"
-          >
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-primary to-[hsl(224_76%_42%)] text-primary-foreground text-[10.5px] font-bold shadow-sm">
-              JV
-            </span>
-            <ChevronDown className="h-3 w-3 text-muted-foreground" strokeWidth={2} />
           </button>
         </div>
       </div>

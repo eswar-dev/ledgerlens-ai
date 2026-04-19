@@ -1,4 +1,4 @@
-import { LayoutDashboard, FileUp, MessagesSquare, LifeBuoy, Settings, LogOut, ChevronsUpDown, Sparkles } from "lucide-react";
+import { LayoutDashboard, FileUp, MessagesSquare, LifeBuoy, Settings, LogOut, Sparkles } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import ledgerLensLogo from "@/assets/ledgerlens-logo-horizontal.png";
 
@@ -12,31 +12,18 @@ export function AppSidebar() {
   return (
     <aside className="hidden md:flex fixed left-0 top-0 h-screen w-[260px] z-20 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
       {/* Brand */}
-      <div className="px-5 pt-5 pb-4">
-        <div className="flex items-center">
+      <div className="px-5 pt-5 pb-5 border-b border-sidebar-border/70">
+        <a href="/" className="flex items-center">
           <img
             src={ledgerLensLogo}
             alt="LedgerLens AI"
             className="h-9 w-auto"
-            loading="lazy"
           />
-        </div>
-      </div>
-
-      {/* Workspace switcher */}
-      <div className="mx-3 mb-5 flex items-center gap-2.5 rounded-xl border border-sidebar-border bg-sidebar-accent/40 px-2.5 py-2 hover:bg-sidebar-accent/70 transition-colors cursor-pointer">
-        <div className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-sidebar-primary to-[hsl(224_76%_42%)] text-sidebar-primary-foreground text-[11px] font-bold shadow-sm">
-          AE
-        </div>
-        <div className="min-w-0 flex-1 leading-tight">
-          <div className="truncate text-[12.5px] font-semibold text-foreground">Aether Capital</div>
-          <div className="truncate text-[10.5px] text-muted-foreground">Pro workspace</div>
-        </div>
-        <ChevronsUpDown className="h-3.5 w-3.5 text-muted-foreground" />
+        </a>
       </div>
 
       {/* Section label */}
-      <div className="px-5 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/70">
+      <div className="px-5 pt-5 pb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground/70">
         Workspace
       </div>
 

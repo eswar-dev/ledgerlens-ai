@@ -148,10 +148,10 @@ export default function ChatBot() {
   );
 }
 
-/** SaaS-grade brand avatar — uses the LedgerLens mark instead of a generic bot face */
+/** Brand avatar — clean blue circle with sparkle, matching the LedgerLens AI mark */
 function AssistantAvatar() {
   return (
-    <div className="relative grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-primary to-[hsl(224_76%_42%)] shadow-[0_2px_6px_-1px_hsl(221_83%_53%/0.35),inset_0_1px_0_hsl(0_0%_100%/0.15)] ring-1 ring-primary/20">
+    <div className="relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary shadow-[0_2px_6px_-1px_hsl(221_83%_53%/0.4)]">
       <Sparkles className="h-4 w-4 text-primary-foreground" strokeWidth={2} />
       <span className="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-success ring-2 ring-card" />
     </div>

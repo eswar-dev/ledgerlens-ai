@@ -79,8 +79,8 @@ export default function Dashboard() {
         <section className="rounded-2xl border border-border bg-card overflow-hidden">
           <div className="flex items-center justify-between px-6 py-4 border-b border-border/70">
             <div className="flex items-center gap-2">
-              <span className="grid h-7 w-7 place-items-center rounded-lg bg-primary text-primary-foreground">
-                <Sparkles className="h-3.5 w-3.5" />
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground shadow-[0_2px_6px_-1px_hsl(221_83%_53%/0.4)]">
+                <Sparkles className="h-4 w-4" strokeWidth={2} />
               </span>
               <div>
                 <h3 className="font-display text-[20px] text-foreground leading-tight">Insights & Recommendations</h3>
