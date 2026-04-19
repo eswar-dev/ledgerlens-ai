@@ -12,15 +12,14 @@ export function AppSidebar() {
   return (
     <aside className="hidden md:flex fixed left-0 top-0 h-screen w-[260px] z-20 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
       {/* Brand */}
-      <div className="px-5 pt-6 pb-6 border-b border-sidebar-border/70">
-        <div className="flex items-center">
+      <div className="px-5 pt-5 pb-5 border-b border-sidebar-border/70">
+        <a href="/" className="flex items-center">
           <img
             src={ledgerLensLogo}
             alt="LedgerLens AI"
-            className="h-8 w-auto"
-            loading="eager"
+            className="h-10 w-auto max-w-full object-contain object-left"
           />
-        </div>
+        </a>
       </div>
 
       {/* Section label */}
