@@ -17,7 +17,7 @@ export function AppSidebar() {
           <img
             src={ledgerLensLogo}
             alt="LedgerLens AI"
-            className="h-10 w-auto max-w-full object-contain object-left"
+            className="h-9 w-auto"
           />
         </a>
       </div>
