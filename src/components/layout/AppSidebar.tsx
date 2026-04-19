@@ -1,11 +1,11 @@
-import { LayoutGrid, UploadCloud, Bot, LifeBuoy, Settings, LogOut, ChevronsUpDown, Sparkles } from "lucide-react";
+import { LayoutDashboard, FileUp, MessagesSquare, LifeBuoy, Settings, LogOut, ChevronsUpDown, Sparkles } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import ledgerLensLogo from "@/assets/ledgerlens-logo-horizontal.png";
 
 const navItems = [
-  { to: "/", label: "Upload", icon: UploadCloud, end: true },
-  { to: "/dashboard", label: "Dashboard", icon: LayoutGrid },
-  { to: "/chatbot", label: "Assistant", icon: Bot },
+  { to: "/", label: "Upload", icon: FileUp, end: true },
+  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { to: "/chatbot", label: "LedgerLens AI", icon: MessagesSquare },
 ];
 
 export function AppSidebar() {
