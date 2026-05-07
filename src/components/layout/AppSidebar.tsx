@@ -1,5 +1,8 @@
 import { LayoutDashboard, FileUp, MessagesSquare, LifeBuoy, Settings, LogOut, Sparkles } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
+import { toast } from "sonner";
 import ledgerLensLogo from "@/assets/ledgerlens-logo-horizontal.png";
 
 const navItems = [
@@ -9,6 +12,24 @@ const navItems = [
 ];
 
 export function AppSidebar() {
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
+
+  const initials = (user?.user_metadata?.full_name || user?.email || "U")
+    .split(/\s+|@/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((p: string) => p[0]?.toUpperCase())
+    .join("");
+  const displayName = user?.user_metadata?.full_name || user?.email?.split("@")[0] || "Account";
+  const displayEmail = user?.email || "";
+
+  const handleLogout = async () => {
+    await signOut();
+    toast.success("Signed out");
+    navigate("/login", { replace: true });
+  };
+
   return (
     <aside className="hidden md:flex fixed left-0 top-0 h-screen w-[260px] z-20 flex-col bg-sidebar text-sidebar-foreground border-r border-sidebar-border">
       {/* Brand */}
@@ -67,13 +88,17 @@ export function AppSidebar() {
         </button>
         <div className="mt-2 flex items-center gap-2.5 rounded-xl border border-sidebar-border bg-sidebar-accent/30 px-2.5 py-2">
           <div className="grid h-8 w-8 place-items-center rounded-full bg-gradient-to-br from-sidebar-primary to-[hsl(224_76%_42%)] text-sidebar-primary-foreground text-[11px] font-bold shadow-sm">
-            JV
+            {initials || "U"}
           </div>
           <div className="min-w-0 flex-1 leading-tight">
-            <div className="truncate text-[12.5px] font-semibold text-foreground">Julian Vane</div>
-            <div className="truncate text-[10.5px] text-muted-foreground">julian@aec.co</div>
+            <div className="truncate text-[12.5px] font-semibold text-foreground">{displayName}</div>
+            <div className="truncate text-[10.5px] text-muted-foreground">{displayEmail}</div>
           </div>
-          <button className="text-muted-foreground hover:text-destructive transition-colors">
+          <button
+            onClick={handleLogout}
+            aria-label="Sign out"
+            className="text-muted-foreground hover:text-destructive transition-colors"
+          >
             <LogOut className="h-4 w-4" strokeWidth={1.75} />
           </button>
         </div>
